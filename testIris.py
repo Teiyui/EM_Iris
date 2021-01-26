@@ -5,7 +5,7 @@ from scipy.stats import multivariate_normal
 from sklearn.model_selection import train_test_split
 
 # Step 1 : Get the train dataset and test dataset
-iris = pd.read_csv('../dataset/iris.csv')
+iris = pd.read_csv('./iris.csv')
 x_df = iris.drop('species', axis=1)
 y_df = iris['species']
 X_train, X_test, y_train, y_test = train_test_split(x_df, y_df, train_size=0.2, random_state=10)
