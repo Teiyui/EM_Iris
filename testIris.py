@@ -32,7 +32,6 @@ def get_each_type_conditions(types, name):
 
 
 conds = get_each_type_conditions(types, 'species')
-0.469911
 
 # Step 3 : Get the initial distribution of every type
 def get_each_type_initial_distribution(conditions):
@@ -120,7 +119,7 @@ prev_log_likelihood = 0.0
 for i in range(99):
     after_log_likelihood = one_step()
 
-    if prev_log_likelihood / after_log_likelihood > 0.999:  # 0.1%以上対数尤度が改善しなければ抜ける
+    if prev_log_likelihood / after_log_likelihood > 0.999:  
         break
     else:
         prev_log_likelihood = after_log_likelihood
